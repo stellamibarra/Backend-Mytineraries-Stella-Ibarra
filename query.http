@@ -10,12 +10,12 @@ GET http://localhost:3000/api/cities/
 
 POST http://localhost:3000/api/cities
 Content-Type: application/json
-
-{
-  "name": "New York",
-  "description": "USA",
+ {
+    "name": "Buenos Aires",
+    "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
     "img": "https://www.nycgo.com/images/venues/1472/central-park-summerstage-summerstage-artist-1-danny-clinch__x_large.jpg"
-}
+  }
+
 
 
 ###
@@ -24,81 +24,70 @@ Content-Type: application/json
 
 POST http://localhost:3000/api/cities/all
 Content-Type: application/json
-
 [
   {
-    "name": "New York",
-    "description": "USA",
-    "img": "https://www.nycgo.com/images/venues/1472/central-park-summerstage-summerstage-artist-1-danny-clinch__x_large.jpg"
+    "name": "Buenos Aires",
+    "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/buenos-aires-min-e1508249745124.jpg"
   },
   {
-    "name": "Paris",
-    "description": "France",
-    "img": "https://cdn.pixabay.com/photo/2017/07/17/23/48/paris-2510338_1280.jpg"
+    "name": "Córdoba",
+    "description": "Importante centro cultural y educativo en Argentina, conocida por sus universidades y arquitectura colonial.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/cordoba-min.jpg"
   },
   {
-    "name": "Tokyo",
-    "description": "Japan",
-    "img": "https://cdn.pixabay.com/photo/2018/05/09/21/03/tokyo-3382696_1280.jpg"
+    "name": "Rosario",
+    "description": "Ciudad portuaria en el río Paraná, cuna de importantes figuras históricas como Che Guevara y Lionel Messi.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/rosario-min-e1508250582986.jpg"
   },
   {
-    "name": "Rome",
-    "description": "Italy",
-    "img": "https://cdn.pixabay.com/photo/2017/08/07/23/30/rome-2605174_1280.jpg"
+    "name": "Mendoza",
+    "description": "Famosa por sus viñedos y la producción de vino, con una impresionante vista de los Andes.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/mendoza-min-e1508250601933.jpg"
   },
   {
-    "name": "Rio de Janeiro",
-    "description": "Brazil",
-    "img": "https://cdn.pixabay.com/photo/2018/01/04/11/38/rio-de-janeiro-3061118_1280.jpg"
+    "name": "Mar del Plata",
+    "description": "Destino de playa popular en la costa atlántica de Argentina, conocida por su vida nocturna y playas.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/mar-del-plata-min-e1508250694311.jpg"
   },
   {
-    "name": "Sydney",
-    "description": "Australia",
-    "img": "https://cdn.pixabay.com/photo/2016/09/04/20/25/sydney-opera-house-1646472_1280.jpg"
+    "name": "Bariloche (San Carlos de Bariloche)",
+    "description": "Ubicada en la región de los lagos y famosa por su belleza natural y el chocolate suizo.",
+    "img": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2020/05/08213126/shutterstock_1371228326-696x320.jpg"
   },
   {
-    "name": "Cairo",
-    "description": "Egypt",
-    "img": "https://cdn.pixabay.com/photo/2016/08/12/23/48/cairo-1580493_1280.jpg"
+    "name": "Salta",
+    "description": "Ciudad en el noroeste de Argentina, con una rica herencia cultural y arquitectura colonial.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/salta-min-e1508250720677.jpg"
   },
   {
-    "name": "Mumbai",
-    "description": "India",
-    "img": "https://cdn.pixabay.com/photo/2016/03/27/19/37/mumbai-1280785_1280.jpg"
+    "name": "San Juan",
+    "description": "Conocida por sus viñedos y producción de vino, parte de la región de Cuyo en Argentina.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/san-juan-min-e1508250799658.jpg"
   },
   {
-    "name": "Cape Town",
-    "description": "South Africa",
-    "img": "https://cdn.pixabay.com/photo/2018/03/06/23/24/table-mountain-3208803_1280.jpg"
+    "name": "La Plata",
+    "description": "Capital de la provincia de Buenos Aires, conocida por su arquitectura y espacios verdes.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/Catedral-La-Plata-min-e1508250634776.jpg"
   },
   {
-    "name": "Moscow",
-    "description": "Russia",
-    "img": "https://cdn.pixabay.com/photo/2017/08/24/10/43/moscow-2672202_1280.jpg"
+    "name": "Ushuaia",
+    "description": "Ciudad más austral del mundo, en Tierra del Fuego, famosa por su paisaje y actividades al aire libre.",
+    "img": "https://media.staticontent.com/media/pictures/ba85ed43-5565-41bf-bd59-6c35b7719820"
   },
   {
-    "name": "Mexico City",
-    "description": "Mexico",
-    "img": "https://cdn.pixabay.com/photo/2016/01/18/17/15/mexico-city-1150026_1280.jpg"
+    "name": "Salta",
+    "description": "Ciudad en el noroeste de Argentina, con una rica herencia cultural y arquitectura colonial.",
+    "img": "https://i2.wp.com/fueradeeje.com/wp-content/uploads/2020/06/DESTINOS-M%C3%81S-VISITADOS-DE-SALTA-05.jpg?resize=800%2C533&ssl=1"
   },
   {
-    "name": "Bangkok",
-    "description": "Thailand",
-    "img": "https://cdn.pixabay.com/photo/2015/09/14/20/35/bangkok-942798_1280.jpg"
+    "name": "Misiones",
+    "description": "Conocida por las Cataratas del Iguazú, una de las maravillas naturales del mundo.",
+    "img": "https://viajerosocultos.com/wp-content/uploads/2023/01/waterfall-at-iguazu-national-park-surrounded-by-forests-covered-in-the-fog-under-cloudy-sky.jpg"
   },
   {
-    "name": "Berlin",
-    "description": "Germany",
-    "img": "https://cdn.pixabay.com/photo/2016/03/27/22/22/berlin-1281781_1280.jpg"
-  },
-  {
-    "name": "Istanbul",
-    "description": "Turkey",
-    "img": "https://cdn.pixabay.com/photo/2015/09/18/19/03/istanbul-949952_1280.jpg"
-  },
-  {
-    "name": "Seoul",
-    "description": "South Korea",
-    "img": "https://cdn.pixabay.com/photo/2018/09/18/17/05/seoul-3680950_1280.jpg"
+    "name": "San Miguel de Tucumán",
+    "description": "Cuna de la independencia de Argentina, ofrece historia y arquitectura colonial.",
+    "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/tucuman-23-min-e1508250667248.jpg"
   }
 ]
