@@ -1,0 +1,104 @@
+###
+### Cities
+###
+
+GET http://localhost:3000/api/cities/
+
+###
+### Users
+###
+
+POST http://localhost:3000/api/cities
+Content-Type: application/json
+
+{
+  "name": "New York",
+  "description": "USA",
+    "img": "https://www.nycgo.com/images/venues/1472/central-park-summerstage-summerstage-artist-1-danny-clinch__x_large.jpg"
+}
+
+
+###
+### POST ALL CITIES post un json con varias ciudades
+###
+
+POST http://localhost:3000/api/cities/all
+Content-Type: application/json
+
+[
+  {
+    "name": "New York",
+    "description": "USA",
+    "img": "https://www.nycgo.com/images/venues/1472/central-park-summerstage-summerstage-artist-1-danny-clinch__x_large.jpg"
+  },
+  {
+    "name": "Paris",
+    "description": "France",
+    "img": "https://cdn.pixabay.com/photo/2017/07/17/23/48/paris-2510338_1280.jpg"
+  },
+  {
+    "name": "Tokyo",
+    "description": "Japan",
+    "img": "https://cdn.pixabay.com/photo/2018/05/09/21/03/tokyo-3382696_1280.jpg"
+  },
+  {
+    "name": "Rome",
+    "description": "Italy",
+    "img": "https://cdn.pixabay.com/photo/2017/08/07/23/30/rome-2605174_1280.jpg"
+  },
+  {
+    "name": "Rio de Janeiro",
+    "description": "Brazil",
+    "img": "https://cdn.pixabay.com/photo/2018/01/04/11/38/rio-de-janeiro-3061118_1280.jpg"
+  },
+  {
+    "name": "Sydney",
+    "description": "Australia",
+    "img": "https://cdn.pixabay.com/photo/2016/09/04/20/25/sydney-opera-house-1646472_1280.jpg"
+  },
+  {
+    "name": "Cairo",
+    "description": "Egypt",
+    "img": "https://cdn.pixabay.com/photo/2016/08/12/23/48/cairo-1580493_1280.jpg"
+  },
+  {
+    "name": "Mumbai",
+    "description": "India",
+    "img": "https://cdn.pixabay.com/photo/2016/03/27/19/37/mumbai-1280785_1280.jpg"
+  },
+  {
+    "name": "Cape Town",
+    "description": "South Africa",
+    "img": "https://cdn.pixabay.com/photo/2018/03/06/23/24/table-mountain-3208803_1280.jpg"
+  },
+  {
+    "name": "Moscow",
+    "description": "Russia",
+    "img": "https://cdn.pixabay.com/photo/2017/08/24/10/43/moscow-2672202_1280.jpg"
+  },
+  {
+    "name": "Mexico City",
+    "description": "Mexico",
+    "img": "https://cdn.pixabay.com/photo/2016/01/18/17/15/mexico-city-1150026_1280.jpg"
+  },
+  {
+    "name": "Bangkok",
+    "description": "Thailand",
+    "img": "https://cdn.pixabay.com/photo/2015/09/14/20/35/bangkok-942798_1280.jpg"
+  },
+  {
+    "name": "Berlin",
+    "description": "Germany",
+    "img": "https://cdn.pixabay.com/photo/2016/03/27/22/22/berlin-1281781_1280.jpg"
+  },
+  {
+    "name": "Istanbul",
+    "description": "Turkey",
+    "img": "https://cdn.pixabay.com/photo/2015/09/18/19/03/istanbul-949952_1280.jpg"
+  },
+  {
+    "name": "Seoul",
+    "description": "South Korea",
+    "img": "https://cdn.pixabay.com/photo/2018/09/18/17/05/seoul-3680950_1280.jpg"
+  }
+]
