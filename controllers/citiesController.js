@@ -79,8 +79,7 @@ export const deleteCity = async (req, res) => {
 }
 
 export const createAllCities = async (req, res) => {
-    const cities = req.body; // Assuming req.body is an array of city objects
-  
+    const cities = req.body; 
     try {
       const newCities = await Promise.all(cities.map(async (city) => {
         const newCity = new City(city);

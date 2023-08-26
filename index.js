@@ -5,6 +5,7 @@ import './config/database.js'
 import indexRouter from './routes/indexRouter.js'
 
 dotenv.config()
+
 const app = express()
 
 app.use(cors())
