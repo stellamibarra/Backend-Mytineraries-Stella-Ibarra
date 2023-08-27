@@ -14,8 +14,19 @@ Content-Type: application/json
  {
     "name": "Buenos Aires",
      "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/buenos-aires-min-e1508249745124.jpg",
-    "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa."
-   
+    "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
+   "Itinerary":[
+	"user"[
+		"username":"admin",
+		"password":"admin",
+		"email":" "
+			],
+	"duration":"3",
+	"price":"100",
+	"tags":["museo","historia","arte"],
+	"likes":"0"
+	"activities":[],
+   ]
   }
 
 
