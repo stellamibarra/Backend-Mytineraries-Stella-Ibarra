@@ -2,24 +2,20 @@ import mongoose from "mongoose";
 
 
 const itinerarySchema = new mongoose.Schema({
-    name: { type: String, required: true },
-    img: { type: String, required: true },
+
+    city: { type: mongoose.Schema.Types.ObjectId, ref: 'City' },
     description: { type: String, required: true },
-    ItineraryCities: { type: mongoose.Schema.Types.ObjectId, ref: 'ItineraryCities' },
-
-
-
-
-    duration: { type: number },
-    price: { type: number },
+    price: { type: Number, required: true },
     tags: [{ type: String, required: true }],
 
-    likes: { type: number },
+    likes: { type: Number, required: true },
     activities: [{ type: String, required: true }],
+    comments: [{ type: String, required: true }],
+    user: [{ type: mongoose.Schema.Types.ObjectId, ref: 'User' }],
 
 
 })
 
-const City = mongoose.model('ItineraryCities', itinerarySchema)
+const ItineraryCities = mongoose.model('ItineraryCities', itinerarySchema)
 
 export default ItineraryCities

@@ -14,19 +14,7 @@ Content-Type: application/json
  {
     "name": "Buenos Aires",
      "img": "https://www.ejemplos.co/wp-content/uploads/2017/10/buenos-aires-min-e1508249745124.jpg",
-    "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
-   "Itinerary":[
-	"user"[
-		"username":"admin",
-		"password":"admin",
-		"email":" "
-			],
-	"duration":"3",
-	"price":"100",
-	"tags":["museo","historia","arte"],
-	"likes":"0"
-	"activities":[],
-   ]
+    "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa."
   }
 
 
@@ -255,7 +243,8 @@ Content-Type: application/json
 	{
 		"name": "Neuquén",
 		"country": "Argentina",
-		"description": "Importante ciudad en la región patagónica, conocida por su crecimiento económico y belleza natural.",
+		"description": "Importante ciudad en    ItineraryCities: { type: mongoose.Schema.Types.ObjectId, ref: 'ItineraryCities' },
+ la región patagónica, conocida por su crecimiento económico y belleza natural.",
 		"img": "http://neuquentur.gob.ar/lab/wp-content/uploads/2019/03/desembocadura-Ruca-Malen-Parque-Nacional-Nahuel-Huapi-960x657.jpg",
 		"Itinerary":[
 	"user"[
@@ -332,3 +321,130 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3000/api/cities/all
+
+###-----------------------------------ITINERARY-------------------------###
+
+POST http://localhost:3000/api/itineraryCity HTTP/1.1
+Content-Type: application/json
+
+ "Itinerary":[
+	"duration":"3",
+	"price":"1",
+	"tags":["museo","historia","arte"],
+	"likes":"0"
+	"activities":[],
+	"comments":[],
+   ]
+
+
+###
+### Get Itinerary
+###
+GET http://localhost:3000/api/itineraryCity HTTP/1.1
+Content-Type: application/json
+"itineraryCity"[
+	"duration":"3",
+	"price":"1",
+	"tags":["museo","historia","arte"],
+	"likes":"0"
+	"activities":[],
+	"comments":[],
+   ]
+   
+
+###
+### Get Itinerary by ID
+###
+GET http://localhost:3000/api/itineraryCity/5f0b0b0b1c9d440000c3b0b0 HTTP/1.1
+Content-Type: application/json
+"itineraryCity"[
+	"duration":"2",
+	"price":"1",
+	"tags":["museo","historia","arte"],
+	"likes":"0"
+	"activities":[],
+	"comments":[],
+   ]
+###
+### Delete Itinerary by ID
+###
+DELETE http://localhost:3000/api/itineraryCity/5f0b0b0b1c9d440000c3b0b0 HTTP/1.1
+Content-Type: application/json
+"itineraryCity"[
+	"duration":"2",
+	"price":"1",
+	"tags":["museo","historia","arte"],
+	"likes":"0"
+	"activities":[],
+	"comments":[],
+   ]
+   
+###
+### Update Itinerary by ID
+###
+PUT http://localhost:3000/api/itineraryCity/5f0b0b0b1c9d440000c3b0b0 HTTP/1.1
+Content-Type: application/json
+"itineraryCity"[
+	"duration":"2",
+	"price":"1",
+	"tags":["museo","historia","arte"],
+	"likes":"0"
+	"activities":[],
+	"comments":[],
+   ]
+   
+
+
+
+
+
+
+
+###-------------------------------Users---------------------------------###
+
+###
+### Post User
+###
+   POST http://localhost:3000/api/user HTTP/1.1
+Content-Type: application/json
+   
+   "user"[
+		"userName":"admin",
+		"userImage":"href"
+			]
+
+###
+### Get User
+###
+
+GET http://localhost:3000/api/user
+Content-Type: application/json
+
+###
+### Get User by ID
+###
+
+GET http://localhost:3000/api/user/5f0b0b0b1c9d440000c3b0b0
+Content-Type: application/json
+
+###
+
+###
+### Delete User by ID
+###
+
+DELETE http://localhost:3000/api/user/5f0b0b0b1c9d440000c3b0b0
+Content-Type: application/json
+
+###
+### Update User by ID
+###
+
+PUT http://localhost:3000/api/user/5f0b0b0b1c9d440000c3b0b0
+Content-Type: application/json
+
+###
+### Post User
+
+
+
