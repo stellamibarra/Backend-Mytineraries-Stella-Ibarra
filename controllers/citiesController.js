@@ -1,5 +1,6 @@
 import City from "../models/City.js";
 
+
 // export const getCities = async (req, res) => {
 
 //     const query = {}
