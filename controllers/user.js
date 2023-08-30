@@ -1,4 +1,6 @@
-import user from '../models/itineraryuser';
+import user from '../models/user.js';
+
+console.log(user)
 
 export const getUsers = async (req, res) => {
     //obtener todos los usuarios
@@ -50,7 +52,7 @@ export const deleteUser = async (req, res) => {
     res.status(409).json({ message: error.message });
   }
 }
-export const createAllUser = async (req, res) => {
+export const createUsers = async (req, res) => {
     //crear todos los usuarios
   const users = req.body;
   try {

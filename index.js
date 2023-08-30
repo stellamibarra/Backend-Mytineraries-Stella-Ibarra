@@ -2,7 +2,7 @@ import dotenv from 'dotenv'
 import express from 'express'
 import cors from 'cors'
 import './config/database.js'
-import indexRouter from './routes/indexRouter.js'
+import index from './routes/index.js'
 
 dotenv.config()
 
@@ -14,7 +14,7 @@ app.use(express.json())
 
 app.get('/', (req, res) => res.send('Hello World!'))
 
-app.use('/api/', indexRouter)
+app.use('/api/', index)
 
 app.listen(process.env.PORT,process.env.HOST,  () => {
     console.log(process.env.PORT)

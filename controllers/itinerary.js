@@ -1,4 +1,6 @@
-import itinerary from "../models/ItineraryCities.js";
+import itinerary from "../models/itinerary.js";
+
+
 
 export const getItineraries = async (req, res) => {
     //obtener todos los itinerarios

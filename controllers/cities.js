@@ -1,43 +1,19 @@
-import City from "../models/City.js";
-
-
-// export const getCities = async (req, res) => {
-
-//     const query = {}
-//     if (req.query.name) {
-//         query.name = {$regex: req.query.name, $options: 'i'}
-//     }
-//     if (req.query.description) {
-//         query.description = {$regex: req.query.description, $options: 'i'}
-//     }
-//     try {
-//         const cities = await City.find(query)
-//         res.status(200).json(
-//             {
-//                 status:200,
-//                 success:true,
-//                 response: cities
-//             }
-//     )
-//     } catch (error) {
-//         res.status(500)
-//         .json({ message: error })
-//     }
-// }
+import City from "../models/city.js";
 
 export  const getCities = async   (req, res) => {
-    try {
-        const city = await City.find(req.params)
-        res.json(city)
-    } catch (error) {
-        res.status(500).json({ message: error })
+        //populate para traer los itinerarios
+       try {
+        const cities = await City.find().populate('itinerary')
+        res.json(cities)
+       } catch (error) {
+              res.status(500).json({ message: error })        
+       } 
     }
-}
-
-
+    
 export const getCity = async (req, res) => {
     try {
         const city = await City.findById(req.params.id)
+        .populate('itinerary')
         res.json(city)
     } catch (error) {
         res.status(500).json({ message: error })
@@ -79,7 +55,7 @@ export const deleteCity = async (req, res) => {
     }
 }
 
-export const createAllCities = async (req, res) => {
+export const createCities = async (req, res) => {
     const cities = req.body; 
     try {
       const newCities = await Promise.all(cities.map(async (city) => {
