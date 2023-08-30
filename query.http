@@ -26,121 +26,119 @@ Content-Type: application/json
 POST http://localhost:3000/api/cities/all
 Content-Type: application/json
 
-[{
+[
+	{
 		"name": "Buenos Aires",
 		"country": "Argentina",
 		"description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/buenos-aires-min-e1508249745124.jpg",
-		
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/buenos-aires-min-e1508249745124.jpg"
 	},
 	{
 		"name": "Córdoba",
 		"country": "Argentina",
 		"description": "Importante centro cultural y educativo en Argentina, conocida por sus universidades y arquitectura colonial.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/cordoba-min.jpg",
-		
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/cordoba-min.jpg"
+
 	},
 	{
 		"name": "Rosario",
 		"country": "Argentina",
 		"description": "Ciudad portuaria en el río Paraná, cuna de importantes figuras históricas como Che Guevara y Lionel Messi.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/rosario-min-e1508250582986.jpg",
-		
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/rosario-min-e1508250582986.jpg"
+
 	},
 	{
 		"name": "Mendoza",
 		"country": "Argentina",
 		"description": "Famosa por sus viñedos y la producción de vino, con una impresionante vista de los Andes.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/mendoza-min-e1508250601933.jpg",
-	
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/mendoza-min-e1508250601933.jpg"
+
 	},
 	{
 		"name": "Mar del Plata",
 		"country": "Argentina",
 		"description": "Destino de playa popular en la costa atlántica de Argentina, conocida por su vida nocturna y playas.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/mar-del-plata-min-e1508250694311.jpg",
-		
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/mar-del-plata-min-e1508250694311.jpg"
+
 	},
 	{
 		"name": "Bariloche (San Carlos de Bariloche)",
 		"country": "Argentina",
 		"description": "Ubicada en la región de los lagos y famosa por su belleza natural y el chocolate suizo.",
-		"img": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2020/05/08213126/shutterstock_1371228326-696x320.jpg",
-		
+		"img": "https://denomades.s3.us-west-2.amazonaws.com/blog/wp-content/uploads/2020/05/08213126/shutterstock_1371228326-696x320.jpg"
+
 	},
 	{
 		"name": "Salta",
 		"country": "Argentina",
 		"description": "Ciudad en el noroeste de Argentina, con una rica herencia cultural y arquitectura colonial.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/salta-min-e1508250720677.jpg",
-		
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/salta-min-e1508250720677.jpg"
+
 	},
 	{
 		"name": "San Juan",
 		"country": "Argentina",
 		"description": "Conocida por sus viñedos y producción de vino, parte de la región de Cuyo en Argentina.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/san-juan-min-e1508250799658.jpg",
-	
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/san-juan-min-e1508250799658.jpg"
+
 	},
 	{
 		"name": "La Plata",
 		"country": "Argentina",
 		"description": "Capital de la provincia de Buenos Aires, conocida por su arquitectura y espacios verdes.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/Catedral-La-Plata-min-e1508250634776.jpg",
-		
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/Catedral-La-Plata-min-e1508250634776.jpg"
+
 	},
 	{
 		"name": "Ushuaia",
 		"country": "Argentina",
 		"description": "Ciudad más austral del mundo, en Tierra del Fuego, famosa por su paisaje y actividades al aire libre.",
-		"img": "https://www.costacruceros.com/content/dam/costa/costa-magazine/article-images/what-to-see-in-ushaia/ushuaia.jpg.image.648.487.high.jpg",
-		
+		"img": "https://www.costacruceros.com/content/dam/costa/costa-magazine/article-images/what-to-see-in-ushaia/ushuaia.jpg.image.648.487.high.jpg"
+
 	},
 	{
 		"name": "Misiones",
 		"country": "Argentina",
 		"description": "Conocida por las Cataratas del Iguazú, una de las maravillas naturales del mundo.",
-		"img": "https://viajerosocultos.com/wp-content/uploads/2023/01/waterfall-at-iguazu-national-park-surrounded-by-forests-covered-in-the-fog-under-cloudy-sky.jpg",
-		
+		"img": "https://viajerosocultos.com/wp-content/uploads/2023/01/waterfall-at-iguazu-national-park-surrounded-by-forests-covered-in-the-fog-under-cloudy-sky.jpg"
+
 	},
 	{
 		"name": "San Miguel de Tucumán",
 		"country": "Argentina",
 		"description": "Cuna de la independencia de Argentina, ofrece historia y arquitectura colonial.",
-		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/tucuman-23-min-e1508250667248.jpg",
-		
+		"img": "https://www.ejemplos.co/wp-content/uploads/2017/10/tucuman-23-min-e1508250667248.jpg"
+
 	},
 	{
 		"name": "Neuquén",
 		"country": "Argentina",
-		"description": "Importante ciudad en    ItineraryCities: { type: mongoose.Schema.Types.ObjectId, ref: 'ItineraryCities' },
- la región patagónica, conocida por su crecimiento económico y belleza natural.",
-		"img": "http://neuquentur.gob.ar/lab/wp-content/uploads/2019/03/desembocadura-Ruca-Malen-Parque-Nacional-Nahuel-Huapi-960x657.jpg",
-		
+		"description": "Importante ciudad en la región patagónica conocida por su crecimiento económico y belleza natural.",
+		"img": "http://neuquentur.gob.ar/lab/wp-content/uploads/2019/03/desembocadura-Ruca-Malen-Parque-Nacional-Nahuel-Huapi-960x657.jpg"
+
 	},
 	{
 		"name": "Corrientes",
 		"country": "Argentina",
 		"description": "Situada junto al río Paraná, famosa por sus festivales de carnaval y riqueza cultural.",
-		"img": "https://photo620x400.mnstatic.com/469e20fbee84115753e1783aedb2656f/corrientes-capital.jpg?quality=70&format=pjpg",
-		
+		"img": "https://photo620x400.mnstatic.com/469e20fbee84115753e1783aedb2656f/corrientes-capital.jpg?quality=70&format=pjpg"
+
 	},
 	{
 		"name": "Bahía Blanca",
 		"country": "Argentina",
 		"description": "Puerto importante en la provincia de Buenos Aires, conocido por su industria y actividades portuarias.",
-		"img": "https://www.argentinaturismo.com.ar/bahiablanca/galeria/bahia_blanca1.jpg",
-		
+		"img": "https://www.argentinaturismo.com.ar/bahiablanca/galeria/bahia_blanca1.jpg"
+
 	},
 	{
 		"name": "Posadas",
 		"country": "Argentina",
 		"description": "Capital de la provincia de Misiones, ubicada cerca de las Cataratas del Iguazú.",
-		"img": "https://2.bp.blogspot.com/-c1u_I2L_w9w/VYzc8k4G8nI/AAAAAAAADVo/Bb8eqJnLJ1g/s640/fotoDestino_posadas_696.png",
-		
+		"img": "https://2.bp.blogspot.com/-c1u_I2L_w9w/VYzc8k4G8nI/AAAAAAAADVo/Bb8eqJnLJ1g/s640/fotoDestino_posadas_696.png"
+
 	}
 ]
-
 
 ###
 ### delete all cities
@@ -242,7 +240,6 @@ Content-Type: application/json
 ###
 ### Get User by ID
 ###
-
 GET http://localhost:3000/api/user/5f0b0b0b1c9d440000c3b0b0
 Content-Type: application/json
 
