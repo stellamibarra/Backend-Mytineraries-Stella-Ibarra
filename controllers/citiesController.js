@@ -14,7 +14,7 @@ export const getCities = async (req, res) => {
     try {
         const cities = await City.find(query).populate({
             path: 'itinerary',
-            select: 'itinerary title img user price hashtags comments likes activities'
+            select: 'itinerary user price hashtags  likes activities'
         })
         res.status(200).json(
             { status: 200, success: true, response: cities }
