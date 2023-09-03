@@ -1,12 +1,10 @@
-import {Router} from 'express';
+import { Router } from "express";
+import { getItinerary, createItinerary, getOneItinerary } from "../controllers/itinerariesController"
+const itinerariesRouter = Router();
 
-import {getItineraries, getItinerary, createItinerary, updateItinerary, deleteItinerary} from '../controllers/itineraryControllers.js'
-const itinerariesRouter = Router()
 
-itinerariesRouter.get('/', getItineraries)
-itinerariesRouter.get('/:id', getItinerary)
-itinerariesRouter.post('/', createItinerary)
-itinerariesRouter.put('/:id', updateItinerary)
-itinerariesRouter.delete('/:id', deleteItinerary)
+itinerariesRouter.get("/",getItinerary);
+itinerariesRouter.post("/",createItinerary);
+itinerariesRouter.get("/:id",getOneItinerary);
 
-export default itinerariesRouter
+export default itinerariesRouter;

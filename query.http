@@ -3,19 +3,73 @@
 ###
 
 GET http://localhost:3000/api/cities/
-
-###
-### Users
-###
-
-POST http://localhost:3000/api/cities
 Content-Type: application/json
- {
-    "name": "Buenos Aires",
-    "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
-    "img": "https://www.nycgo.com/images/venues/1472/central-park-summerstage-summerstage-artist-1-danny-clinch__x_large.jpg"
-  }
 
+{
+  "name": "Buenos Aires",
+  "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
+  "img": "https://www.nycgo.com/images/venues/1472/central-park-summerstage-summerstage-artist-1-danny-clinch__x_large.jpg",
+  "itinerary": [
+    {
+      "title": "Itinerary 1",
+      "img": "https://example.com/itinerary1.jpg",
+      "rating": 4.5,
+      "duration": 3,
+      "price": 50,
+      "hashtags": ["culture", "food", "history"],
+      "comments": [],
+      "likes": 10,
+      "activities": ["Activity 1", "Activity 2", "Activity 3"]
+    },
+    {
+      "title": "Itinerary 2",
+      "img": "https://example.com/itinerary2.jpg",
+      "rating": 4.0,
+      "duration": 2,
+      "price": 40,
+      "hashtags": ["sightseeing", "shopping"],
+      "comments": [],
+      "likes": 8,
+      "activities": ["Activity A", "Activity B", "Activity C"]
+    }
+  ]
+}
+
+###
+### post city
+###
+POST http://localhost:3000/api/cities/all
+Content-Type: application/json
+
+{
+  "name": "Buenos Aires",
+  "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
+  "img": "https://www.nycgo.com/images/venues/1472/central-park-summerstage-summerstage-artist-1-danny-clinch__x_large.jpg",
+  "itinerary": [
+    {
+      "title": "Itinerary 1",
+      "img": "https://example.com/itinerary1.jpg",
+      "rating": 4.5,
+      "duration": 3,
+      "price": 50,
+      "hashtags": ["culture", "food", "history"],
+      "comments": [],
+      "likes": 10,
+      "activities": ["Activity 1", "Activity 2", "Activity 3"]
+    },
+    {
+      "title": "Itinerary 2",
+      "img": "https://example.com/itinerary2.jpg",
+      "rating": 4.0,
+      "duration": 2,
+      "price": 40,
+      "hashtags": ["sightseeing", "shopping"],
+      "comments": [],
+      "likes": 8,
+      "activities": ["Activity A", "Activity B", "Activity C"]
+    }
+  ]
+}
 
 
 ###
