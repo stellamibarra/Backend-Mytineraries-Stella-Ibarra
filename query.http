@@ -2,7 +2,7 @@
 ### Cities
 ###
 
-GET http://localhost:3000/api/cities/
+POST http://localhost:3000/api/cities/
 Content-Type: application/json
 
 {
@@ -38,37 +38,33 @@ Content-Type: application/json
 ###
 ### post city
 ###
-POST http://localhost:3000/api/cities/all
+POST http://localhost:3000/api/cities
+Content-Type: application/json
+
+
+{
+  "name": "Nombre de la ciudad",
+  "country": "Nombre del país",
+  "img": "URL de la imagen",
+  "description": "Descripción de la ciudad",
+  "itinerary": ["ID_del_Itinerario_1", "ID_del_Itinerario_2"]
+}
+
+###
+###
+###
+POST http://localhost:3000/api/itinerary
 Content-Type: application/json
 
 {
-  "name": "Buenos Aires",
-  "description": "Capital de Argentina, una ciudad vibrante y culturalmente diversa.",
-  "img": "https://www.nycgo.com/images/venues/1472/central-park-summerstage-summerstage-artist-1-danny-clinch__x_large.jpg",
-  "itinerary": [
-    {
-      "title": "Itinerary 1",
-      "img": "https://example.com/itinerary1.jpg",
-      "rating": 4.5,
-      "duration": 3,
-      "price": 50,
-      "hashtags": ["culture", "food", "history"],
-      "comments": [],
-      "likes": 10,
-      "activities": ["Activity 1", "Activity 2", "Activity 3"]
-    },
-    {
-      "title": "Itinerary 2",
-      "img": "https://example.com/itinerary2.jpg",
-      "rating": 4.0,
-      "duration": 2,
-      "price": 40,
-      "hashtags": ["sightseeing", "shopping"],
-      "comments": [],
-      "likes": 8,
-      "activities": ["Activity A", "Activity B", "Activity C"]
-    }
-  ]
+  "title": "Título del itinerario 2",
+  "img": "URL de la imagen del 2 itinerario",
+  "user": "Nombre del usuario",
+  "price": 500.00,
+  "hashtags": ["#viaje", "#aventura"],
+  "comments": ["Comentario 1", "Comentario 2"],
+  "likes": 42,
+  "activities": ["Actividad 1", "Actividad 2"]
 }
 
 

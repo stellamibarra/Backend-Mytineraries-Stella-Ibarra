@@ -32,8 +32,8 @@ export const getCity = async (req, res) => {
                 select: 'itinerary title img user price hashtags comments likes activities'
             })
         res.status(200).json({ status: 200, success: true, response: city })
-    } catch (error) {
-        res.status(500).json({ message: error })
+    } catch (error) {   
+             res.status(500).json({ message: 'Error al obtener la ciudad', error: error.message });
     }
 }
 
