@@ -10,7 +10,4 @@ const citieSchema = new Schema({
 })   
 
 const City = mongoose.model('City', citieSchema)
-
-
-
 export default City

@@ -1,6 +1,6 @@
-import {Schema,model} from "mongoose";
+import mongoose from "mongoose";
 
-const itinerarySchema = new Schema({
+const itinerarySchema = new mongoose.Schema({
     title: { type: String, required: true },
     img: { type: String, required: true },
     user: { type: String, required: true },
@@ -9,9 +9,7 @@ const itinerarySchema = new Schema({
     comments: { type: Array, required: true },
     likes: { type: Number, required: true },
     activities: { type: Array, required: true }
-})  
+});
 
-
-const Itinerary = model('I createCitiestinerary', itinerarySchema);
-
+const Itinerary = mongoose.model("Itinerary", itinerarySchema);
 export default Itinerary;

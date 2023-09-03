@@ -1,4 +1,4 @@
-import { Itinerary } from '../models/Itinerary';
+import Itinerary from '../models/Itinerary'
 
 export const getItinerary = async (req, res) => {
   try {
@@ -7,8 +7,6 @@ export const getItinerary = async (req, res) => {
       select: 'name img description'
     })
     res.json(itineraries)
-
-
   } catch (error) {
     res.status(500).json({ error })
   }
