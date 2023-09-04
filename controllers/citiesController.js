@@ -29,7 +29,7 @@ export const getCity = async (req, res) => {
         const city = await City.findById(req.params.id).populate(
             {
                 path: 'itinerary',
-                select: 'itinerary title img user price hashtags comments likes activities'
+                select: 'itinerary  user price hashtags comments likes activities'
             })
         res.status(200).json({ status: 200, success: true, response: city })
     } catch (error) {   
@@ -44,7 +44,9 @@ export const createCity = async (req, res) => {
 
         const itinerary = await Itinerary.findOne({ itinerary: req.body.itinerary })
 
-        if (itinerary) { newCity.itinerary = itinerary._id }
+        if (itinerary) {
+             newCity.itinerary = itinerary._id 
+            }
         else {
             const newItinerary = await Itinerary.create({ itinerary: req.body.itinerary })
             newCity.itinerary = newItinerary._id
@@ -66,7 +68,8 @@ export const createCities = async (req, res) => {
 
         for (const item of req.body) {
             const { Itinerary } = item
-            const newCity = await Itinerary.findOne({ itinerary: Itinerary })
+            const newCity ={...item}
+           const aux = await Itinerary.findOne({ itinerary: Itinerary })
 
             if (aux) {
                 newCity.category = aux._id
