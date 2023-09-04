@@ -1,8 +1,11 @@
 import Itinerary from '../models/Itinerary'
 
-export const getItineraries = async (req, res) => {
+export const getItineraries = async (_, res) => {
     try {
-        const itineraries = await Itinerary.find(req.params)
+        const itineraries = await Itinerary.find().populate({
+            path: 'cities',
+            select : 'name img description -_id'
+        })
         res.json(itineraries)
     } catch (error) {
         res.status(500).json({ message: error })
