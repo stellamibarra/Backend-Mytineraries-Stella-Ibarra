@@ -16,42 +16,58 @@ export const getItineraries = async (_, res) => {
 
 export const getItinerary = async (req, res) => {
     try {
-        const itinerary = await Itinerary.findById(req.params.id)
-        res.json(itinerary)
+        const itinerary = await Itinerary.findById(req.params.id).populate({
+                
+                path: 'cities',
+                select : '-itinerary'
+            }
+            )
+        res.status(200).json({itinerary:itinerary})
     } catch (error) {
         res.status(500).json({ message: error })
     }
 }
 
 export const createItinerary = async (req, res) => {
-
-    const itinerary = req.body
-    const newItinerary = new Itinerary(itinerary)
+  
     try {
-        await newItinerary.save()
-        res.status(201).json(newItinerary)
+        const newItinerary = await Itinerary.create(req.body)
+        res.status(201).json({newItinerary:newItinerary})
     } catch (error) {
         res.status(409).json({ message: error.message })
     }
 }
+
 
 export const updateItinerary = async (req, res) => {
-    
-    const itinerary = req.body
-    const updatedItinerary = new Itinerary(itinerary)
     try {
-        await Itinerary.findByIdAndUpdate(req.params.id, updatedItinerary)
-        res.status(201).json(updatedItinerary)
+        const updatedItinerary = await Itinerary.findByIdAndUpdate(
+            req.params.id,
+            req.body,
+            { new: true } // Esto devuelve el itinerario actualizado en lugar del anterior
+        );
+
+        if (!updatedItinerary) {
+            return res.status(404).json({ message: "Itinerary not found" });
+        }
+
+        res.status(200).json(updatedItinerary);
     } catch (error) {
-        res.status(409).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
 }
+
 export const deleteItinerary = async (req, res) => {
     try {
-        await Itinerary.findByIdAndDelete(req.params.id)
-        res.status(201).json('Itinerary deleted')
+        const deletedItinerary = await Itinerary.findByIdAndDelete(req.params.id);
+
+        if (!deletedItinerary) {
+            return res.status(404).json({ message: "Itinerary not found" });
+        }
+
+        res.status(204).send(); // Usamos 204 para indicar que no hay contenido en la respuesta
     } catch (error) {
-        res.status(409).json({ message: error.message })
+        res.status(500).json({ message: error.message });
     }
 }
 
