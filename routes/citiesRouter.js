@@ -3,6 +3,9 @@ import {getCity, getCities, createCity, createCities} from '../controllers/citie
 
 
 const citiesRouter = Router()
+
+
+
 citiesRouter.get('/', getCities)
 citiesRouter.get('/:id', getCity)
 citiesRouter.post('/', createCity)

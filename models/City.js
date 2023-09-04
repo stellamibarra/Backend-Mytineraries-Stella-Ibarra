@@ -9,5 +9,7 @@ const citieSchema = new mongoose.Schema({
     itinerary: [{ type: mongoose.Types.ObjectId, ref: 'Itinerary',required: true }]
 })   
 
+
+
 const City = mongoose.model('City', citieSchema)
 export default City

@@ -11,10 +11,11 @@ export const getCities = async (req, res) => {
         const aux = await Itinerary.findOne({ itinerary: req.query.itinerary })
         query.itinerary = aux._id
     }
+    
     try {
         const cities = await City.find(query).populate({
             path: 'itinerary',
-            select: 'itinerary user price hashtags  likes activities'
+            select: 'title img user price hashtags comments likes activities'
         })
         res.status(200).json(
             { status: 200, success: true, response: cities }
@@ -38,6 +39,7 @@ export const getCity = async (req, res) => {
 }
 
 export const createCity = async (req, res) => {
+    console.log("ciudad creada", req.body);
     try {
 
         const newCity = { ...req.body }
@@ -58,7 +60,7 @@ export const createCity = async (req, res) => {
             { $push: { cities: city._id } })
         res.status(201).json({ newCity: city })
     } catch (error) {
-        res.status(500).json({ message: error })
+        res.status(500).json({ message: error , error: error.message})
     }
 }
 
