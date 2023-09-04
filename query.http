@@ -6,17 +6,18 @@ POST http://localhost:3000/api/cities
 Content-Type: application/json
 
 {
-  "name": "Nombre de la Ciudad",
-  "img": "URL de la imagen",
-  "description": "Descripción de la ciudad",
-  "itinerary": [
-    {
-      "price": 100,
-      "hashtags": ["viaje", "aventura"],
-      "likes": 0,
-      "user": "Usuario",
-      "activities": ["Actividad 1", "Actividad 2"],
-      "comments": ["Comentario 1", "Comentario 2"]
-    }
-  ]
+	"name": "Nombre de la Ciudad",
+	"country": "País",
+	"img": "URL de la imagen",
+	"description": "Descripción de la ciudad",
+	"itinerary": [{
+		"title": "Título del día",
+		"img": "URL de la imagen",
+		"user": "Usuario",
+		"price": 100,
+		"hashtags": ["viaje", "aventura"],
+		"comments": ["Comentario 1", "Comentario 2"],
+		"likes": 0,
+		"activities": ["Actividad 1", "Actividad 2"]
+	}]
 }
